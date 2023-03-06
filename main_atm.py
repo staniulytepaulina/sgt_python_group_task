@@ -60,7 +60,7 @@ def check_password():
     global pin_tries
     pin = str(input("Input your pin number: "))
     if pin == constants.password:
-        choose_language()
+        language.choose_language()
     else:
         if pin_tries > 1:
             pin_tries = pin_tries - 1
