@@ -44,8 +44,8 @@ def call_based_option(option):
 
 
 def ask_if_wants_to_do_another_action():
-    needs_another_action = ask_if_wants_to_quit()
-    if needs_another_action:
+    wants_to_quit = ask_if_wants_to_quit()
+    if wants_to_quit:
         quit()
     else:
         atm_options()

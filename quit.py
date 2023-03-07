@@ -7,10 +7,10 @@ def quit():
 
 
 def ask_if_wants_to_quit():
-    needs_another_action = str(input("Do you want to quit? Yes/No: ")).lower()
-    if needs_another_action == "yes" or needs_another_action == "y":
+    wants_to_quit = str(input("Do you want to quit? Yes/No: ")).lower()
+    if wants_to_quit == "yes" or wants_to_quit == "y":
         return True
-    elif needs_another_action == "no" or needs_another_action == "n":
+    elif wants_to_quit == "no" or wants_to_quit == "n":
         return False
     else:
         print("Sorry, I didn't get your answer. Please try again.")

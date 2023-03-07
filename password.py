@@ -1,6 +1,7 @@
 import constants
 
 
+# Since it doesn't have a return statement in the else block, if the pin is incorrect, it starts the while loop again
 def check_pin():
     while constants.PIN_TRIES > 0:
         input_pin = int(input("Enter your pin: \n"))
