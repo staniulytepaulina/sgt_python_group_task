@@ -1,5 +1,3 @@
-import sys
-import constants
 import language
 import balance
 import deposit
@@ -8,7 +6,6 @@ import password
 from quit import quit, ask_if_wants_to_quit
 
 chosen_option = 0
-pin_tries = 3
 
 
 def show_menu():
@@ -33,16 +30,14 @@ def check_if_option_is_valid(option):
 def call_based_option(option):
     match option:
         case 1:
-            print("balance")
-            #
+            balance.balance()
             ask_if_wants_to_do_another_action()
         case 2:
-            print("deposit")
-            #
+            deposit.deposit()
+            balance.balance()
             ask_if_wants_to_do_another_action()
         case 3:
-            print("withdraw")
-            #
+            withdraw.withdraw()
             ask_if_wants_to_do_another_action()
         case 4:
             quit()
@@ -56,34 +51,11 @@ def ask_if_wants_to_do_another_action():
         atm_options()
 
 
-def check_password():
-    global pin_tries
-    pin = str(input("Input your pin number: "))
-    if pin == constants.password:
-        language.choose_language()
-    else:
-        if pin_tries > 1:
-            pin_tries = pin_tries - 1
-            print(f"Pin incorrect. You have remaining {pin_tries} tries. Try again:")
-            check_password()
-        else:
-            print("You have been locked out of your account.")
-            sys.exit()
-
-
-def choose_language():
-    language = input(f"Please choose a language ({constants.languages}): ")
-    if language.capitalize() in constants.languages:
-        print(f"You've selected {language} language.")
-        return language.capitalize()
-    else:
-        print(f"We didn't understand you. We will keep English language for you.")
-        return "English"
-
-
 def atm():
-    check_password()
-    atm_options()
+    language.choose_language()
+    is_pin_correct = password.check_pin()
+    if is_pin_correct:
+        atm_options()
 
 
 def atm_options():

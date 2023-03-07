@@ -1,8 +1,7 @@
+import constants
+
+
 # Check current balance
 def balance():
-    return 1000
-print ("Your current balance is:")
-print (balance())
-
-
-
+    print(f"Your current balance is: {constants.BALANCE}")
+    return constants.BALANCE

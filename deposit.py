@@ -1,4 +1,7 @@
-Def deposit(self):
-    amount=float(input("Enter amount to be Deposited: "))
-    self.balance += amount
-    print("\n Amount Deposited:",amount)
+import constants
+
+
+def deposit():
+    amount = float(input("Enter amount to be Deposited: "))
+    constants.BALANCE += amount
+    print("\n Amount Deposited:", amount)
