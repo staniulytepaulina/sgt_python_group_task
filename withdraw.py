@@ -6,6 +6,4 @@ def withdraw(withdraw_amt):
         print("Try with lower amount than balance")
     else:
         print(f"You have withdrawn {withdraw_amount} from your account,you remaining balance is", (current_balance-withdraw_amount))
-
-
-withdraw(withdraw_amount)
+        return current_balance-withdraw_amount
