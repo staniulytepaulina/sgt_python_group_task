@@ -1,4 +1,4 @@
-def deposit(amount):
-    global CURRENT_BALANCE
-    CURRENT_BALANCE += amount
-    return CURRENT_BALANCE
+Def deposit(self):
+    amount=float(input("Enter amount to be Deposited: "))
+    self.balance += amount
+    print("\n Amount Deposited:",amount)
