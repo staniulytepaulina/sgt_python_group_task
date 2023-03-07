@@ -5,8 +5,6 @@ import withdraw
 import password
 from quit import quit, ask_if_wants_to_quit
 
-chosen_option = 0
-
 
 def show_menu():
     print("Choose 1 to check balance.")

@@ -7,5 +7,5 @@ def withdraw():
         print("Can't withdraw", withdraw_amt, "because you don't have enough money")
         print("Try with lower amount than balance")
     else:
-        print(f"You have withdrawn {withdraw_amt} from your account,you remaining balance is", (constants.BALANCE - withdraw_amt))
+        print(f"You have withdrawn {withdraw_amt} from your account, your remaining balance is", (constants.BALANCE - withdraw_amt))
         return constants.BALANCE - withdraw_amt
